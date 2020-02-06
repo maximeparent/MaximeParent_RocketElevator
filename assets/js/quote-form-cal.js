@@ -16,7 +16,7 @@ $(document).ready(function () {
 	})
 });
 
-//To find the number of elevator the user needs for the option COMMERCIAL.
+//To find the number of elevator the user needs for the option COMMERCIAL
 $(document).ready(function () {
 	$(".option-com").change(function () {
 		var $nbrBusinessCom = $("#nbrBusinessCom").val()
@@ -30,7 +30,9 @@ $(document).ready(function () {
 	})
 });
 
-//To find the number of elevator the user needs for the option CORPORATE.
+
+
+//To find the number of elevator the user needs for the option CORPORATE
 $(document).ready(function () {
 	$(".option-cor").change(function () {
 		var $nbrEcompaniesCor = $("#nbrEcompaniesCor").val()
@@ -50,7 +52,7 @@ $(document).ready(function () {
 	})
 });
 
-//To find the number of elevator the user needs for the option HYBRID.	
+//To find the number of elevator the user needs for the option HYBRID	
 $(document).ready(function () {
 	$(".option-hyb").change(function () {
 		var $nbrNumberOfDistinctBusinessesHyb = $("#nbrNumberOfDistinctBusinessesHyb").val()
@@ -77,12 +79,12 @@ function standard() {
 	var $resultElevatorSt = parseInt($("#resultElevator").val())
 	$("#priceElevator").val(7565)
 
-	var $standardResult = $resultElevatorSt * 7565;
-	$installationFeesSt = ($standardResult * 0.10)
-	$resultSt = ($installationFeesSt + $standardResult)
+	var $installationCostsSt = $resultElevatorSt * 7565;
+	$installationFeesSt = ($installationCostsSt * 0.10)
+	$resultSt = ($installationFeesSt + $installationCostsSt)
 
-	// var $standardResult tell the instalation cost and then it will show the result in input id="priceInstalation"
-	$("#priceInstalation").val($standardResult);
+	// var $installationCostsSt tell the instalation cost and then it will show the result in input id="priceInstalation"
+	$("#priceInstalation").val($installationCostsSt);
 	// var $resultSt tell the total cost and then it will show the result in input id="priceTotal"
 	$("#priceTotal").val($resultSt);
 }
@@ -90,11 +92,11 @@ function standard() {
 function premium() {
 	var $resultElevatorPr = parseInt($("#resultElevator").val())
 	$("#priceElevator").val(12345)
-	var $preniumResult = $resultElevatorPr * 12345;
-	$installationFeesPr = ($preniumResult * 0.13)
-	$resultPr = ($installationFeesPr + $preniumResult)
-	// var $preniumResult tell the instalation cost and then it will show the result in input id="priceInstalation"
-	$("#priceInstalation").val($preniumResult);
+	var $installationCostsPr = $resultElevatorPr * 12345;
+	$installationFeesPr = ($installationCostsPr * 0.13)
+	$resultPr = ($installationFeesPr + $installationCostsPr)
+	// var $installationCostsPr tell the instalation cost and then it will show the result in input id="priceInstalation"
+	$("#priceInstalation").val($installationCostsPr);
 	// var $resultPr tell the total cost and then it will show the result in input id="priceTotal"
 	$("#priceTotal").val($resultPr)
 
@@ -103,11 +105,11 @@ function premium() {
 function excelium() {
 	var $resultElevatorEx = parseInt($("#resultElevator").val())
 	$("#priceElevator").val(15400)
-	var $exceliumResult = $resultElevatorEx * 15400;
-	$installationFeesEx = ($exceliumResult * 0.16)
-	$resultEx = ($installationFeesEx + $exceliumResult)
-	// var $exceliumResult tell the instalation cost and then it will show the result in input id="priceInstalation"
-	$("#priceInstalation").val($exceliumResult);
+	var $installationCostsEx = $resultElevatorEx * 15400;
+	$installationFeesEx = ($installationCostsEx * 0.16)
+	$resultEx = ($installationFeesEx + $installationCostsEx)
+	// var $installationCostsEx tell the instalation cost and then it will show the result in input id="priceInstalation"
+	$("#priceInstalation").val($installationCostsEx);
 	// var $resultEx tell the total cost and then it will show the result in input id="priceTotal"
 	$("#priceTotal").val($resultEx)
 }
