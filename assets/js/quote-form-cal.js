@@ -1,4 +1,4 @@
-//To find the number of elevort the user needs for the option RESIDENTIAL.
+//To find the number of elevator the user needs for the option RESIDENTIAL.
 $(document).ready(function () {
 	$(".option-res").change(function () {
 		var $nbrAppartement = $("#nbrAppartement").val()
@@ -16,7 +16,7 @@ $(document).ready(function () {
 	})
 });
 
-//To find the number of elevort the user needs for the option COMMERCIAL
+//To find the number of elevator the user needs for the option COMMERCIAL.
 $(document).ready(function () {
 	$(".option-com").change(function () {
 		var $nbrBusinessCom = $("#nbrBusinessCom").val()
@@ -30,9 +30,7 @@ $(document).ready(function () {
 	})
 });
 
-
-
-//To find the number of elevort the user needs for the option CORPORATE
+//To find the number of elevator the user needs for the option CORPORATE.
 $(document).ready(function () {
 	$(".option-cor").change(function () {
 		var $nbrEcompaniesCor = $("#nbrEcompaniesCor").val()
@@ -52,7 +50,7 @@ $(document).ready(function () {
 	})
 });
 
-//To find the number of elevort the user needs for the option HYBRID	
+//To find the number of elevator the user needs for the option HYBRID.	
 $(document).ready(function () {
 	$(".option-hyb").change(function () {
 		var $nbrNumberOfDistinctBusinessesHyb = $("#nbrNumberOfDistinctBusinessesHyb").val()
@@ -88,8 +86,6 @@ function standard() {
 	// var $resultSt tell the total cost and then it will show the result in input id="priceTotal"
 	$("#priceTotal").val($resultSt);
 }
-
-
 
 function premium() {
 	var $resultElevatorPr = parseInt($("#resultElevator").val())
