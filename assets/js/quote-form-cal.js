@@ -10,6 +10,7 @@ function standard() {
 	$("#priceInstalation").val($installationCostsSt);
 	// var $resultSt tell the total cost and then it will show the result in input id="priceTotal"
 	$("#priceTotal").val($resultSt);
+
 }
 
 function premium() {
@@ -35,9 +36,9 @@ function excelium() {
 	$("#priceInstalation").val($installationCostsEx);
 	// var $resultEx tell the total cost and then it will show the result in input id="priceTotal"
 	$("#priceTotal").val($resultEx)
-}	
+}
 
-	//To find the number of elevator the user needs for the option RESIDENTIAL.
+//To find the number of elevator the user needs for the option RESIDENTIAL.
 $(document).ready(function () {
 	$(".option-res").change(function () {
 		var $nbrAppartement = $("#nbrAppartement").val()
@@ -50,18 +51,15 @@ $(document).ready(function () {
 
 		var nbrElevators = parseFloat($nbrDoorsPerFloor) * parseFloat($column);
 
+		// automatically change the results of priceInstalation and priceTotal when user click on the buttons
 		if ($("#standard").is(":checked")) {
 			standard();
-		}
-
-		else if ($("#prenium").is(":checked")) {
+		} else if ($("#prenium").is(":checked")) {
 			premium();
-		}
-
-		else if ($("#excelium").is(":checked")) {
+		} else if ($("#excelium").is(":checked")) {
 			excelium();
 		}
-		
+
 		//var nbrElevators will tell how much elevators the user needs and then it will show the result in input id="resultElevator"
 		$("#resultElevator").val(nbrElevators);
 	})
@@ -69,7 +67,6 @@ $(document).ready(function () {
 
 
 //To find the number of elevator the user needs for the option COMMERCIAL
-$(document).ready(function () {
 	$(".option-com").change(function () {
 		var $nbrBusinessCom = $("#nbrBusinessCom").val()
 		var $nbrFloorCom = $("#nbrFloorCom").val();
@@ -77,27 +74,22 @@ $(document).ready(function () {
 		var $nbrParkingCom = $("#nbrParkingCom").val();
 		var $nbrElevatorCom = $("#nbrElevatorCom").val();
 
+		// automatically change the results of priceInstalation and priceTotal when user click on the buttons
 		if ($("#standard").is(":checked")) {
 			standard();
-		}
-
-		else if ($("#prenium").is(":checked")) {
+		} else if ($("#prenium").is(":checked")) {
 			premium();
-		}
-
-		else if ($("#excelium").is(":checked")) {
+		} else if ($("#excelium").is(":checked")) {
 			excelium();
 		}
 
 		//var $nbrElevatorCom will tell how much elevators the user needs and then it will show the result in input id="resultElevator"
 		$("#resultElevator").val($nbrElevatorCom);
 	})
-});
 
 
 
 //To find the number of elevator the user needs for the option CORPORATE
-$(document).ready(function () {
 	$(".option-cor").change(function () {
 		var $nbrEcompaniesCor = $("#nbrEcompaniesCor").val()
 		var $nbrFloorCor = $("#nbrFloorCor").val()
@@ -110,15 +102,12 @@ $(document).ready(function () {
 		var $nbrResultElevatorsByCol = Math.ceil($nbrElevatorCor / $columnCor);
 		var $nberElevator = $nbrResultElevatorsByCol * $columnCor;
 
+		// automatically change the results of priceInstalation and priceTotal when user click on the buttons
 		if ($("#standard").is(":checked")) {
 			standard();
-		}
-
-		else if ($("#prenium").is(":checked")) {
+		} else if ($("#prenium").is(":checked")) {
 			premium();
-		}
-
-		else if ($("#excelium").is(":checked")) {
+		} else if ($("#excelium").is(":checked")) {
 			excelium();
 		}
 
@@ -126,10 +115,8 @@ $(document).ready(function () {
 		$("#resultElevator").val($nberElevator);
 
 	})
-});
 
 //To find the number of elevator the user needs for the option HYBRID	
-$(document).ready(function () {
 	$(".option-hyb").change(function () {
 		var $nbrNumberOfDistinctBusinessesHyb = $("#nbrNumberOfDistinctBusinessesHyb").val()
 		var $nbrFloorHyb = $("#nbrFloorHyb").val()
@@ -146,19 +133,15 @@ $(document).ready(function () {
 
 		var $nbrElevator = $nbrResultElevatorsByColHyb * $columnHyb;
 
+		// automatically change the results of priceInstalation and priceTotal when user click on the buttons
 		if ($("#standard").is(":checked")) {
 			standard();
-		}
-
-		else if ($("#prenium").is(":checked")) {
+		} else if ($("#prenium").is(":checked")) {
 			premium();
-		}
-
-		else if ($("#excelium").is(":checked")) {
+		} else if ($("#excelium").is(":checked")) {
 			excelium();
 		}
 
 		//var $nbrElevator tell how much elevators the user needs and then it will show the result in input id="resultElevator"
 		$("#resultElevator").val($nbrElevator);
 	})
-});
