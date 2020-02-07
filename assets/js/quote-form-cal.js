@@ -67,81 +67,81 @@ $(document).ready(function () {
 
 
 //To find the number of elevator the user needs for the option COMMERCIAL
-	$(".option-com").change(function () {
-		var $nbrBusinessCom = $("#nbrBusinessCom").val()
-		var $nbrFloorCom = $("#nbrFloorCom").val();
-		var $nbrBasementCom = $("#nbrBasementCom").val();
-		var $nbrParkingCom = $("#nbrParkingCom").val();
-		var $nbrElevatorCom = $("#nbrElevatorCom").val();
+$(".option-com").change(function () {
+	var $nbrBusinessCom = $("#nbrBusinessCom").val()
+	var $nbrFloorCom = $("#nbrFloorCom").val();
+	var $nbrBasementCom = $("#nbrBasementCom").val();
+	var $nbrParkingCom = $("#nbrParkingCom").val();
+	var $nbrElevatorCom = $("#nbrElevatorCom").val();
 
-		// automatically change the results of priceInstalation and priceTotal when user click on the buttons
-		if ($("#standard").is(":checked")) {
-			standard();
-		} else if ($("#prenium").is(":checked")) {
-			premium();
-		} else if ($("#excelium").is(":checked")) {
-			excelium();
-		}
+	// automatically change the results of priceInstalation and priceTotal when user click on the buttons
+	if ($("#standard").is(":checked")) {
+		standard();
+	} else if ($("#prenium").is(":checked")) {
+		premium();
+	} else if ($("#excelium").is(":checked")) {
+		excelium();
+	}
 
-		//var $nbrElevatorCom will tell how much elevators the user needs and then it will show the result in input id="resultElevator"
-		$("#resultElevator").val($nbrElevatorCom);
-	})
+	//var $nbrElevatorCom will tell how much elevators the user needs and then it will show the result in input id="resultElevator"
+	$("#resultElevator").val($nbrElevatorCom);
+})
 
 
 
 //To find the number of elevator the user needs for the option CORPORATE
-	$(".option-cor").change(function () {
-		var $nbrEcompaniesCor = $("#nbrEcompaniesCor").val()
-		var $nbrFloorCor = $("#nbrFloorCor").val()
-		var $nbrBasementCor = $("#nbrBasementCor").val()
-		var $nbrParkingCor = $("#nbrParkingCor").val()
-		var $nbrOccupantsPerFloorCor = $("#nbrOccupantsPerFloorCor").val()
+$(".option-cor").change(function () {
+	var $nbrEcompaniesCor = $("#nbrEcompaniesCor").val()
+	var $nbrFloorCor = $("#nbrFloorCor").val()
+	var $nbrBasementCor = $("#nbrBasementCor").val()
+	var $nbrParkingCor = $("#nbrParkingCor").val()
+	var $nbrOccupantsPerFloorCor = $("#nbrOccupantsPerFloorCor").val()
 
-		var $nbrElevatorCor = Math.ceil($nbrOccupantsPerFloorCor * ($nbrFloorCor + $nbrBasementCor) / 1000);
-		var $columnCor = Math.ceil(($nbrFloorCor + $nbrBasementCor) / 20);
-		var $nbrResultElevatorsByCol = Math.ceil($nbrElevatorCor / $columnCor);
-		var $nberElevator = $nbrResultElevatorsByCol * $columnCor;
+	var $nbrElevatorCor = Math.ceil($nbrOccupantsPerFloorCor * ($nbrFloorCor + $nbrBasementCor) / 1000);
+	var $columnCor = Math.ceil(($nbrFloorCor + $nbrBasementCor) / 20);
+	var $nbrResultElevatorsByCol = Math.ceil($nbrElevatorCor / $columnCor);
+	var $nberElevator = $nbrResultElevatorsByCol * $columnCor;
 
-		// automatically change the results of priceInstalation and priceTotal when user click on the buttons
-		if ($("#standard").is(":checked")) {
-			standard();
-		} else if ($("#prenium").is(":checked")) {
-			premium();
-		} else if ($("#excelium").is(":checked")) {
-			excelium();
-		}
+	// automatically change the results of priceInstalation and priceTotal when user click on the buttons
+	if ($("#standard").is(":checked")) {
+		standard();
+	} else if ($("#prenium").is(":checked")) {
+		premium();
+	} else if ($("#excelium").is(":checked")) {
+		excelium();
+	}
 
-		//var $nbrElevator will tell how much elevators the user needs and then it will show the result in input id="resultElevator"
-		$("#resultElevator").val($nberElevator);
+	//var $nbrElevator will tell how much elevators the user needs and then it will show the result in input id="resultElevator"
+	$("#resultElevator").val($nberElevator);
 
-	})
+})
 
 //To find the number of elevator the user needs for the option HYBRID	
-	$(".option-hyb").change(function () {
-		var $nbrNumberOfDistinctBusinessesHyb = $("#nbrNumberOfDistinctBusinessesHyb").val()
-		var $nbrFloorHyb = $("#nbrFloorHyb").val()
-		var $nbrBasementHyb = $("#nbrBasementHyb").val()
-		var $nbrParkingHyb = $("#nbrParkingHyb").val()
-		var $nbrOccupantsPerFloorHyb = $("#nbrOccupantsPerFloorHyb").val()
-		var $nbrHoursOfActivityHyb = $("#nbrHoursOfActivityHyb").val()
+$(".option-hyb").change(function () {
+	var $nbrNumberOfDistinctBusinessesHyb = $("#nbrNumberOfDistinctBusinessesHyb").val()
+	var $nbrFloorHyb = $("#nbrFloorHyb").val()
+	var $nbrBasementHyb = $("#nbrBasementHyb").val()
+	var $nbrParkingHyb = $("#nbrParkingHyb").val()
+	var $nbrOccupantsPerFloorHyb = $("#nbrOccupantsPerFloorHyb").val()
+	var $nbrHoursOfActivityHyb = $("#nbrHoursOfActivityHyb").val()
 
-		var $nbrElevatorHyb = Math.ceil($nbrOccupantsPerFloorHyb * ($nbrFloorHyb + $nbrBasementHyb) / 1000);
+	var $nbrElevatorHyb = Math.ceil($nbrOccupantsPerFloorHyb * ($nbrFloorHyb + $nbrBasementHyb) / 1000);
 
-		var $columnHyb = Math.ceil(($nbrFloorHyb + $nbrBasementHyb) / 20);
+	var $columnHyb = Math.ceil(($nbrFloorHyb + $nbrBasementHyb) / 20);
 
-		var $nbrResultElevatorsByColHyb = Math.ceil($nbrElevatorHyb / $columnHyb);
+	var $nbrResultElevatorsByColHyb = Math.ceil($nbrElevatorHyb / $columnHyb);
 
-		var $nbrElevator = $nbrResultElevatorsByColHyb * $columnHyb;
+	var $nbrElevator = $nbrResultElevatorsByColHyb * $columnHyb;
 
-		// automatically change the results of priceInstalation and priceTotal when user click on the buttons
-		if ($("#standard").is(":checked")) {
-			standard();
-		} else if ($("#prenium").is(":checked")) {
-			premium();
-		} else if ($("#excelium").is(":checked")) {
-			excelium();
-		}
+	// automatically change the results of priceInstalation and priceTotal when user click on the buttons
+	if ($("#standard").is(":checked")) {
+		standard();
+	} else if ($("#prenium").is(":checked")) {
+		premium();
+	} else if ($("#excelium").is(":checked")) {
+		excelium();
+	}
 
-		//var $nbrElevator tell how much elevators the user needs and then it will show the result in input id="resultElevator"
-		$("#resultElevator").val($nbrElevator);
-	})
+	//var $nbrElevator tell how much elevators the user needs and then it will show the result in input id="resultElevator"
+	$("#resultElevator").val($nbrElevator);
+})
